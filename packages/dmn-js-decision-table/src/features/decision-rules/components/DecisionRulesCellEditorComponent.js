@@ -183,6 +183,10 @@ class TableCellEditor extends Component {
     return this.getExpressionLanguage() === 'feel';
   }
 
+  isUnaryTests() {
+    return this.isFEEL() && this._isInputCell();
+  }
+
   getExpressionLanguage() {
     const { businessObject } = this.props;
 
@@ -229,6 +233,7 @@ class TableCellEditor extends Component {
         }
         <Editor
           label={ this._getLabel() }
+          dialect={ this.isUnaryTests() && 'unaryTests' }
           className={ isScript ? 'script-editor' : '' }
           ctrlForNewline={ true }
           onInput={ onChange }
