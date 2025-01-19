@@ -33,7 +33,7 @@
     "min-dash": "^4.2.2",
     "min-dom": "^4.2.1",
     "selection-ranges": "^3.0.2",
-    "selection-update": "^0.1.2",
+    "selection-update": "^1.0.0",
     "table-js": "^9.2.0"
   }
 }
